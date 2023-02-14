@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+:root{
+    --font-family: 'Barlow Semi Condensed', sans-serif;
+    --body-bg:#EDF2F7;
+    --daniel:#733FC8;
+    --jonathan:#48556B;
+    --patrick:#19202D;
+}
+body{
+    background-color: var(--body-bg);
+}
+main{
+  width: 90%;
+  margin: 0 auto;
+  font-size: 13px;
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+}
+article{
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.name-verified{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    margin-left: -1rem;
+}
+.profile-photo{
+    width: 55%;
+    border-radius: 50%;
+    border: 0.5px solid white;
+}
+.daniel{
+    background-color: var(--daniel);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 10%;
+}
+.jonathan{
+    background-color: var(--jonathan);
+}
+.patrick{
+    background-color: var(--patrick);
+}
+.name{
+    font-size: 13px;
+}
+.verified{
+    margin-top: -0.4rem;
+    opacity: 50%;
+}
+.daniel .name-verified , .jonathan .name-verified , .patrick .name-verified {
+    color: white;
+}
+.daniel p , .jonathan p , .patrick p{
+    color: white;
+}
+.text{
+    opacity: 50%;
+    line-height: 1.2rem;
+}
+.bold-text{
+    font-weight: bold;
+    font-size: 20px;
+}
+.janette .name-verified , .kira .name-verified{
+    color: #6E717D;
+}
+.janette p , .kira p {
+    color: #494E60;
+}
+.jeanette , .kira{
+    background-color: white;
+}
+@media (min-width:769px){
+
+    body{
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+    }
+   main{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(2, 1fr);
+   }
+   .daniel , .patrick{
+    grid-column: span 2;
+   }
+   .kira{
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+   }
+}
